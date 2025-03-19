@@ -1,0 +1,28 @@
+{
+  "name": "forkify",
+  "version": "1.0.0",
+  "description": "Recipe application",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Francisco577366/AppFood.git"
+  },
+  "author": "Francisco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Francisco577366/AppFood/issues"
+  },
+  "homepage": "https://github.com/Francisco577366/AppFood#readme",
+  "dependencies": {
+    "core-js": "^3.41.0",
+    "fracty": "^1.0.12",
+    "regenerator-runtime": "^0.14.1"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.14.0",
+    "parcel": "^2.14.1"
+  }
+}
