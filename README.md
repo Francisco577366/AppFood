@@ -1,3 +1,3 @@
 # App Food Aplication
 
-Recipe aplication with custom recipe uploads.
+1. Recipe aplication with custom recipe uploads.
