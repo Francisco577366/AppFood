@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import View from './View.js';
+=======
+import View from './view.js';
+>>>>>>> 164eac80dfc1ffd4d7cd8c16e0ce21260b7d32a3
 import previewView from './previewView.js';
 import icons from 'url:../../img/icons.svg'; // Parcel 2
 

@@ -21,6 +21,7 @@ const controlRecipes = async function () {
     // 0) Update results view to mark selected search result
     resultsView.update(model.getSearchResultsPage());
 
+<<<<<<< HEAD
     // 1) Updating bookmarks view
     bookmarksView.update(model.state.bookmarks);
 
@@ -28,6 +29,15 @@ const controlRecipes = async function () {
     await model.loadRecipe(id);
 
     // 3) Rendering recipe
+=======
+    // 1) updating bookmarks view
+    bookmarksView.update(model.state.bookmarks);
+
+    // 2) loading recipe
+    await model.loadRecipe(id);
+
+    //3) Insertando los datos.
+>>>>>>> 164eac80dfc1ffd4d7cd8c16e0ce21260b7d32a3
     recipeView.render(model.state.recipe);
   } catch (err) {
     recipeView.renderError();
@@ -64,6 +74,7 @@ const controlPagination = function (goToPage) {
   paginationView.render(model.state.search);
 };
 
+<<<<<<< HEAD
 const controlServings = function (newServings) {
   // Update the recipe servings (in state)
   model.updateServings(newServings);
@@ -75,6 +86,11 @@ const controlServings = function (newServings) {
 const controlAddBookmark = function () {
   // 1) Add/remove bookmark
   if (!model.state.recipe.bookmarked) model.addBookmark(model.state.recipe);
+=======
+const controlAddBookmark = function () {
+  // 1) Add/remove bookmark
+  if (!model.state.recipe.bookmarked) model.addBookMark(model.state.recipe);
+>>>>>>> 164eac80dfc1ffd4d7cd8c16e0ce21260b7d32a3
   else model.deleteBookmark(model.state.recipe.id);
 
   // 2) Update recipe view
@@ -93,6 +109,7 @@ const controlAddRecipe = async function (newRecipe) {
     // Show loading spinner
     addRecipeView.renderSpinner();
 
+<<<<<<< HEAD
     // Upload the new recipe data
     await model.uploadRecipe(newRecipe);
     console.log(model.state.recipe);
@@ -110,11 +127,27 @@ const controlAddRecipe = async function (newRecipe) {
     window.history.pushState(null, '', `#${model.state.recipe.id}`);
 
     // Close form window
+=======
+    await model.uploadRecipe(newRecipe);
+    console.log(model.state.recipe);
+
+    //Render recipe
+    recipeView.render(model.state.recipe);
+
+    // Succes message
+    addRecipeView.renderMessage();
+
+    //Close form window
+>>>>>>> 164eac80dfc1ffd4d7cd8c16e0ce21260b7d32a3
     setTimeout(function () {
       addRecipeView.toggleWindow();
     }, MODAL_CLOSE_SEC * 1000);
   } catch (err) {
+<<<<<<< HEAD
     console.error('💥', err);
+=======
+    console.error('!', err);
+>>>>>>> 164eac80dfc1ffd4d7cd8c16e0ce21260b7d32a3
     addRecipeView.renderError(err.message);
   }
 };

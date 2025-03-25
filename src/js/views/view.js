@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import icons from 'url:../../img/icons.svg'; // Parcel 2
 
 export default class View {
@@ -12,6 +13,13 @@ export default class View {
    * @author Jonas Schmedtmann
    * @todo Finish implementation
    */
+=======
+import { mark } from 'regenerator-runtime';
+import icons from 'url:../../img/icons.svg';
+export default class View {
+  _data;
+
+>>>>>>> 164eac80dfc1ffd4d7cd8c16e0ce21260b7d32a3
   render(data, render = true) {
     if (!data || (Array.isArray(data) && data.length === 0))
       return this.renderError();
@@ -35,14 +43,21 @@ export default class View {
 
     newElements.forEach((newEl, i) => {
       const curEl = curElements[i];
+<<<<<<< HEAD
       // console.log(curEl, newEl.isEqualNode(curEl));
+=======
+      // console.log(newEl.isEqualNode(curEl));
+>>>>>>> 164eac80dfc1ffd4d7cd8c16e0ce21260b7d32a3
 
       // Updates changed TEXT
       if (
         !newEl.isEqualNode(curEl) &&
         newEl.firstChild?.nodeValue.trim() !== ''
       ) {
+<<<<<<< HEAD
         // console.log('💥', newEl.firstChild.nodeValue.trim());
+=======
+>>>>>>> 164eac80dfc1ffd4d7cd8c16e0ce21260b7d32a3
         curEl.textContent = newEl.textContent;
       }
 

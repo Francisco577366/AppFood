@@ -1,5 +1,10 @@
 import { async } from 'regenerator-runtime';
+<<<<<<< HEAD
 import { TIMEOUT_SEC } from './config.js';
+=======
+import { TIMEOUT_SEC } from './views/config';
+import { getJSON, sendJSON } from './helpers.js';
+>>>>>>> 164eac80dfc1ffd4d7cd8c16e0ce21260b7d32a3
 
 const timeout = function (s) {
   return new Promise(function (_, reject) {
@@ -31,6 +36,7 @@ export const AJAX = async function (url, uploadData = undefined) {
   }
 };
 
+<<<<<<< HEAD
 /*
 export const getJSON = async function (url) {
   try {
@@ -45,6 +51,8 @@ export const getJSON = async function (url) {
   }
 };
 
+=======
+>>>>>>> 164eac80dfc1ffd4d7cd8c16e0ce21260b7d32a3
 export const sendJSON = async function (url, uploadData) {
   try {
     const fetchPro = fetch(url, {
@@ -54,8 +62,13 @@ export const sendJSON = async function (url, uploadData) {
       },
       body: JSON.stringify(uploadData),
     });
+<<<<<<< HEAD
 
     const res = await Promise.race([fetchPro, timeout(TIMEOUT_SEC)]);
+=======
+    const res = await Promise.race([fetchPro, timeout(TIMEOUT_SEC)]);
+    //1) Cargando los datos
+>>>>>>> 164eac80dfc1ffd4d7cd8c16e0ce21260b7d32a3
     const data = await res.json();
 
     if (!res.ok) throw new Error(`${data.message} (${res.status})`);
@@ -64,4 +77,7 @@ export const sendJSON = async function (url, uploadData) {
     throw err;
   }
 };
+<<<<<<< HEAD
 */
+=======
+>>>>>>> 164eac80dfc1ffd4d7cd8c16e0ce21260b7d32a3
